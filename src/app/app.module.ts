@@ -15,7 +15,6 @@ const rutas: Routes = [
   { path : 'map', component: MapComponent },
   { path : 'dashboard', component : DashboardComponent },
   { path : 'list-markers', component: ListMarkersComponent},
-  { path : 'create-marker', component : AddMarkerComponent }
 ]
 
 @NgModule({
