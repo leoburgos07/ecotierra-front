@@ -1,0 +1,16 @@
+
+<div class="text-center row mt-4">
+    <div class="col-md-4">
+        <app-add-marker></app-add-marker>
+    </div>
+   <div cdkDropList class="example-list col-md-5 " (cdkDropListDropped)="drop($event)">
+    <h3>Listado de marcadores</h3>
+    <div class="example-box row" *ngFor="let marker of markers" cdkDrag>
+        <span class="col-sm-8 text-left font-weight-bold text-uppercase">{{marker.name}} <br> <span class="text-muted"> {{marker.latitude}},{{marker.longitude}}</span></span>
+        <button  (click)="editMarker(marker)" class="btn btn-info col-sm-2 w-25">Editar</button>
+        <button (click)="deleteMarker(marker.id)" class="btn btn-danger col-sm-2 w-25">Eliminar</button>
+    </div>
+  </div>
+   
+</div>
+

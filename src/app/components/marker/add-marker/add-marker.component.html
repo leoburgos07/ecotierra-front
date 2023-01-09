@@ -1,0 +1,21 @@
+<div class="mt-4 text-center">
+    <h4>Añadir Marcador</h4>
+    <br>
+    <form #markerForm="ngForm" (ngSubmit)="submitForm(markerForm)">
+        <input type="hidden" [(ngModel)]="markerService.selectMarker.id" name="id" id="">
+        <div class="form-group w-25  m-auto">
+          <label for="lat">Latitud</label>
+          <input type="text" [(ngModel)]="markerService.selectMarker.latitude" class="form-control" id="lat"  name="latitude">
+        </div>
+        <div class="form-group m-auto w-25">
+          <label for="longitude">Longitud</label>
+          <input type="text" [(ngModel)]="markerService.selectMarker.longitude" class="form-control" name="longitude" id="logitude" >
+        </div>
+        <div class="form-group m-auto w-25">
+            <label for="name">Nombre</label>
+            <input type="text" [(ngModel)]="markerService.selectMarker.name" class="form-control" name="name" id="name" >
+        </div>
+          <br>
+        <button type="submit" class="btn btn-info">Guardar</button>
+    </form>
+</div>
