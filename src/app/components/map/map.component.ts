@@ -34,7 +34,7 @@ export class MapComponent implements OnInit {
       })
       if (this.points.length > 2) {
         polygon(this.latlngs, { color: 'red' }).addTo(map);
-        rectangle(this.latlngs, { color: 'red' }).addTo(map);
+        //rectangle(this.latlngs, { color: 'red' }).addTo(map);
       }
       this.points.map((item: any) => {
         marker([item.latitude, item.longitude]).addTo(map).bindPopup(item.name.toUpperCase());
